@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::before {
+    box-sizing: border-box;
+}
+
+*::after {
+    box-sizing: border-box;
+}
+
+#div1 {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translate(50%);
+}
+
+#div1::before {
+    content: '';
+    display: block;
+    position: relative;
+}
+
+#div1::after {
+    content: '';
+    display: block;
+    position: relative;
+}
+
+#html {
+    word-break: break-all;
+    /*消除横向滚动条 */
+}
+
+@media(max-width: 500px) {
+    #html {
+        height: 60vh;
+        position: relative;
+        overflow: auto;
+    }
+
+    #div1Warper {
+        height: 40vh;
+    }
+
+    #div1 {
+        position: relative;
+        top: 0;
+        right: 0;
+        transform: translate(-50%, 25%);
+    }
+}
